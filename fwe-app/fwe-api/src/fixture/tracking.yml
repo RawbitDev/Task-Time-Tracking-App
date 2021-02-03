@@ -1,0 +1,15 @@
+entity: Tracking
+items:
+  TestTracking1:
+    id: '1'
+    description: 'This is the 1st test tracking.'
+    startTime: '2020-11-15T10:00:00.000Z'
+  TestTracking2:
+    id: '2'
+    description: 'This is the 2nd test tracking.'
+    startTime: '2020-11-15T12:00:00.000Z'
+  TestTracking3:
+    id: '3'
+    description: 'This is the 3rd test tracking.'
+    startTime: '2020-11-15T12:00:00.000Z'
+    endTime: '2020-11-15T15:00:00.000Z'

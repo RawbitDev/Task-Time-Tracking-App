@@ -1,0 +1,24 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "FWE React Cypress for a time/task tracking app",
+  "scripts": {
+    "cypress": "npx cypress open"
+  },
+  "keywords": [
+    "FWE",
+    "h-da",
+    "Cypress",
+    "Tasks",
+    "Tracking",
+    "Time",
+    "Labels"
+  ],
+  "author": "Ramon Walther <Ramon.Walther@stud.h-da.de>",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/cypress": "^6.0.0",
+    "cypress": "^4.7.0",
+    "test-data-bot": "^0.8.0"
+  }
+}

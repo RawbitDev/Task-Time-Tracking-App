@@ -1,0 +1,11 @@
+entity: Label
+items:
+  TestLabel1:
+    id: '1'
+    name: 'TestLabel1'
+  TestLabel2:
+    id: '2'
+    name: 'TestLabel2'
+  TestLabel3:
+    id: '3'
+    name: 'TestLabel3'

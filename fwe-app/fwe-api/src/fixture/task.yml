@@ -1,0 +1,28 @@
+entity: Task
+items:
+  TestTask1:
+    id: '1'
+    name: 'TestTask1'
+    description: 'This is the 1st test task.'
+    labels:
+      - '@TestLabel1'
+      - '@TestLabel2'
+      - '@TestLabel3'
+    trackings:
+      - '@TestTracking1'
+      - '@TestTracking2'
+      - '@TestTracking3'
+  TestTask2:
+    id: '2'
+    name: 'TestTask2'
+    description: 'This is the 2nd test task.'
+    labels:
+      - '@TestLabel1'
+      - '@TestLabel3'
+  TestTask3:
+    id: '3'
+    name: 'TestTask3'
+    description: 'This is the 3rd test task.'
+    trackings:
+      - '@TestTracking2'
+      - '@TestTracking3'

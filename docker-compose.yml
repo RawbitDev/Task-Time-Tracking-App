@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+  fwe-frontend:
+    image: node:alpine
+    container_name: fwe-frontend
+    working_dir: /fwe-app/fwe-frontend
+    command: sh entrypoint.sh
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./fwe-app/fwe-frontend:/fwe-app/fwe-frontend
+  fwe-api:
+    image: node:alpine
+    container_name: fwe-api
+    working_dir: /fwe-app/fwe-api
+    command: sh entrypoint.sh -dev # Remove the "-dev" to turn off the development mode
+    restart: always
+    ports: # Have to match the value set in env file
+      - 3000:3000
+    volumes:
+      - ./fwe-app/fwe-api:/fwe-app/fwe-api
+  fwe-mysql:
+    image: mysql:latest
+    container_name: fwe-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports: # Have to match the value set in env file
+      - 3306:3306
+    volumes:
+      - ./fwe-app/fwe-db:/var/lib/mysql
+    cap_add:
+      - SYS_NICE
+    environment: # Have to match the values set in env file
+      - MYSQL_DATABASE=fwe-app
+      - MYSQL_ROOT_PASSWORD=NeverGuessThis!
